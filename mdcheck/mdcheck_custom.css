@@ -1,0 +1,25 @@
+.svy-wrapper>*> .amd-check {
+	max-height: 100%;
+	width: 100%;
+	overflow-y: auto;
+	overflow-x: auto;
+}
+
+.svy-wrapper>*> .amd-check > .amd-check-item > .md-label {
+	max-width: 100%;
+	overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    box-sizing: border-box;
+    padding-left: 30px;
+    margin-left: 0px;
+}
+
+
+.amd-check {
+	width: 100%;
+}
+
+.amd-check md-checkbox {
+	width: 100%;
+}

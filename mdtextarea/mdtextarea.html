@@ -1,0 +1,12 @@
+<md-input-container
+		class = "amd-textarea"
+		ng-class="model.styleClass" 
+		svy-tooltip='model.toolTipText'
+		svy-enter="handlers.onActionMethodID($event)" 
+	 	svy-rightclick='handlers.onRightClickMethodID($event)'
+		id="{{::model.svyMarkupId}}"
+		ng-if="model.visible">
+
+	<label ng-bind-html="model.label"></label>
+	<data-angularmaterial-mdtextarea-template/>
+</md-input-container>

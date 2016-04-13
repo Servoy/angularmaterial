@@ -1,0 +1,29 @@
+.amd-select {
+	max-width: 100%;
+	width: 100%;
+}
+
+.amd-select md-select {
+/* 	padding-right: 14px;*/
+}
+
+.amd-select .md-select-icon {
+	position: absolute;
+    right: 0px;	
+}
+
+.amd-select .md-select-value > * {
+	max-width: 100%;
+}
+
+.amd-select .md-select-value .md-text {
+	max-width: 100%;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.svy-wrapper>*>.amd-select {
+	width: 100%;
+}
+
+

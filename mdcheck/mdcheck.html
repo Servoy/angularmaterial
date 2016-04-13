@@ -1,0 +1,34 @@
+<div layout="row" layout-wrap 
+	 class="amd-check"
+	 sablo-tabseq-config="{container: true, reservedGap: 500}"
+	 id="{{::model.svyMarkupId}}"
+	 ng-if="model.visible">
+		<md-checkbox ng-repeat="item in model.valuelistID | filter:notNullOrEmpty('realValue')" ng-if="model.valuelistID"
+						ng-model="checkData[$index]" 
+						ng-change="selectItem($event, item.realValue, false)"
+						ng-true-value="'{{item.realValue}}'"
+			            ng-false-value="''"
+						ng-class="model.styleClass"
+						class="amd-check-item"
+						ng-disabled="!model.enabled || model.readOnly"
+						sablo-tabseq='model.tabSeq'
+	 					svy-rightclick="handlers.onRightClickMethodID($event)" 
+						svy-focusgained="handlers.onFocusGainedMethodID($event)"
+						svy-focuslost="handlers.onFocusLostMethodID($event)">
+			{{item.displayValue}}
+		</md-checkbox>
+		<md-checkbox ng-if="!model.valuelistID"
+					 ng-model="model.dataProviderID"
+					 ng-change="saveData($event)"
+					 ng-true-value="1"
+			         ng-false-value="0"
+				     ng-class="model.styleClass"
+				     class="amd-check-item"
+					 ng-disabled="!model.enabled || model.readOnly"
+					 sablo-tabseq='model.tabSeq'
+	 				 svy-rightclick="handlers.onRightClickMethodID($event)" 
+				     svy-focusgained="handlers.onFocusGainedMethodID($event)"
+					 svy-focuslost="handlers.onFocusLostMethodID($event)">
+			{{model.label}}
+		</md-checkbox>
+</div>

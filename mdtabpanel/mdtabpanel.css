@@ -1,0 +1,19 @@
+/*  */
+.amd-disabled-overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 999;
+    background-color: rgba(0,0,0,0.084);
+}
+
+.amd-tabpanel {
+	/*height: 100%;*/
+}
+
+.svy-titleheader > div > *> .amd-tabpanel,
+.svy-header > div > *> .amd-tabpanel,
+.svy-body > div > *> .amd-tabpanel,
+.svy-footer > div > *> .amd-tabpanel {
+	height: 100%;
+}

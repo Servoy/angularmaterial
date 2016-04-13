@@ -1,0 +1,28 @@
+<md-autocomplete
+				md-items="item in querySearch(searchText)"
+				md-item-text="item.displayValue"
+				md-selected-item="selectedItem"
+				md-search-text-change="searchTextChange(searchText)"
+				md-search-text="searchText"
+				md-selected-item-change="selectedItemChange(item)"
+				md-select-on-match
+				ng-disabled="!model.enabled || model.readOnly"
+				md-floating-label="{{model.label}}"
+				md-no-cache=true
+				md-min-length="0"
+				class="amd-autocomplete"
+				ng-class="model.styleClass"
+				md-menu-class="{{model.styleClass ? model.styleClass + ' amd-autoselect-menu-container': 'amd-autoselect-menu-container'}}"
+				placeholder="{{model.label}}"
+				sablo-tabseq='model.tabSeq'
+				svy-tooltip='model.toolTipText'
+				svy-enter='handlers.onActionMethodID($event)'
+				svy-rightclick='handlers.onRightClickMethodID($event)'
+				id="{{::model.svyMarkupId}}"
+				ng-if="model.visible">
+
+	<md-item-template>
+		<span md-highlight-text="searchText" md-highlight-flags="^i">{{item.displayValue}}</span>
+	</md-item-template>
+
+</md-autocomplete>

@@ -1,0 +1,43 @@
+Manifest-Version: 1.0
+CSS-ClientLibs: angularmaterial/lib/material/angular-material.css;name
+ =angular-material.css;version=v1.0.0-rc5-master, angularmaterial/lib/
+ material/angular-material.layouts.css;name=angular-material-layouts-c
+ ss;version=v1.0.0-rc5-master, angularmaterial/lib/material/fonts/Mate
+ rialIcons-Regular/MaterialIcons-Regular.css;name=material-icons-regul
+ ar.css;version=v1.0.0-rc5-master
+Bundle-SymbolicName: angularmaterial
+Bundle-Name: angularmaterial
+Package-Type: Web-Component
+JS-ClientLibs: angularmaterial/lib/material/angular-material.js;name=a
+ ngular-material.js;version=v1.0.0-rc5-master, angularmaterial/lib/mat
+ erial/angular-animate.js;name=angular-animate.js;version=1.4.3, angul
+ armaterial/lib/material/angular-aria.js;name=angular-aria.js;version=
+ v1.5.0, angularmaterial/lib/hammer/hammer.min.js;name=hammer.js;versi
+ on=v2.0.4
+
+Name: mdautocomplete/mdautocomplete.spec
+Web-Component: True
+
+Name: mdradio/mdradio.spec
+Web-Component: True
+
+Name: mdselect/mdselect.spec
+Web-Component: True
+
+Name: mdtextarea/mdtextarea.spec
+Web-Component: True
+
+Name: mdbutton/mdbutton.spec
+Web-Component: True
+
+Name: mdcheck/mdcheck.spec
+Web-Component: True
+
+Name: mdswitch/mdswitch.spec
+Web-Component: True
+
+Name: mdtabpanel/mdtabpanel.spec
+Web-Component: True
+
+Name: mdinput/mdinput.spec
+Web-Component: True

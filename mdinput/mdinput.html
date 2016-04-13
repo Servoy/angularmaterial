@@ -1,0 +1,19 @@
+<md-input-container
+		class = "amd-input"
+		ng-class="model.styleClass" 
+		svy-tooltip='model.toolTipText'
+		svy-enter="handlers.onActionMethodID($event)" 
+	 	svy-rightclick='handlers.onRightClickMethodID($event)'
+		id="{{::model.svyMarkupId}}"
+		ng-if="model.visible">
+
+  <label ng-bind-html="model.label"></label>
+
+  <input type="text" ng-model="model.dataProviderID" 
+		sablo-tabseq='model.tabSeq'
+		svy-focusgained='handlers.onFocusGainedMethodID($event)'
+	   	svy-focuslost='handlers.onFocusLostMethodID($event)'
+		svy-format="model.format"
+		svy-autoapply />
+
+</md-input-container>

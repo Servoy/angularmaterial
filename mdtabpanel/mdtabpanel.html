@@ -1,0 +1,27 @@
+<md-tabs md-selected="selectedIndex" 
+			id="{{::model.svyMarkupId}}"
+			ng-class='model.styleClass' 
+			class="amd-tabpanel" 
+			sablo-tabseq='model.tabSeq' 
+			sablo-tabseq-config="{container: true, reservedGap: 50}"
+			ng-show="model.visible">
+
+    <md-tab ng-repeat="tab in model.tabs" 
+			ng-disabled="tab.disabled || !model.enabled || model.readOnly"
+			class="mdtabpanel-fullheight">
+
+		<md-tab-label><div ng-bind-html="tab.text"/></md-tab-label>
+
+		<md-tab-body>
+			 <div ng-class="(tab.disabled || !model.enabled || model.readOnly) ? 'amd-disabled-overlay': ''" class='amd-overlay' />
+	         <div class='amd-tabpanel-tab' 
+						ng-if="tab.active"
+						ng-include="getActiveTabUrl(tab)" 
+						sablo-tabseq='1' 
+						sablo-tabseq-config="{container: true}" 
+						<!--ng-style='getContainerStyle()'--> />
+        </md-tab-body>
+
+    </md-tab>
+
+</md-tabs>
