@@ -2,5 +2,7 @@
     "name":"Angular Material",
     "type":"component",
     "icon": "https://camo.githubusercontent.com/6795c053f2fafee4d1c76f3a181876013827dd5e/68747470733a2f2f662e636c6f75642e6769746875622e636f6d2f6173736574732f333437303430322f313230383630372f32376637643134322d323564362d313165332d386330372d6139316532633736396435322e706e67",
-    "releases" : ["1.0.0","1.0.1","1.0.2"],
+    "releases" : [{"version":"1.0.0","file":"https://github.com/Servoy/angularmaterial/releases/download/1.0.0/angularmaterial.zip"},
+        {"version":"1.0.1","file":"https://github.com/Servoy/angularmaterial/releases/download/1.0.1/angularmaterial.zip"},
+        {"version":"1.0.2","file":"https://github.com/Servoy/angularmaterial/releases/download/1.0.2/angularmaterial.zip"}],
 }
