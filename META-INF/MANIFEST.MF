@@ -7,7 +7,7 @@ CSS-ClientLibs: angularmaterial/lib/material/angular-material.css;name
  ar.css;version=v1.0.0-rc5-master
 Bundle-SymbolicName: angularmaterial
 Bundle-Name: angularmaterial
-Implementation-Version: 1.0.2
+Bundle-Version: 1.0.0
 Package-Type: Web-Component
 JS-ClientLibs: angularmaterial/lib/material/angular-material.js;name=a
  ngular-material.js;version=v1.0.0-rc5-master, angularmaterial/lib/mat
