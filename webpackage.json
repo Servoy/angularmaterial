@@ -6,7 +6,5 @@
     "sampleUrl": "http://www.servoy.com",
     "wikiUrl": "https://github.com/Servoy/angularmaterial/wiki",
     "sourceUrl" : "https://github.com/Servoy/angularmaterial",
-    "releases" : [{"version":"1.0.0","url":"https://github.com/Servoy/angularmaterial/releases/download/1.0.0/angularmaterial.zip"},
-        {"version":"1.0.1","url":"https://github.com/Servoy/angularmaterial/releases/download/1.0.1/angularmaterial.zip"},
-        {"version":"1.0.2","url":"https://github.com/Servoy/angularmaterial/releases/download/1.0.2/angularmaterial.zip"}],
+    "releases" : [{"version":"1.0.0","url":"https://github.com/Servoy/angularmaterial/releases/download/v1.0.0/angularmaterial.zip"}],
 }
