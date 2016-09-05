@@ -67,13 +67,6 @@ typeid:15,
 uuid:"7DB21430-BE6F-42F5-93E6-C410463C53A7"
 },
 {
-containsFormID:"3B5666EB-4D7E-420E-99A3-3027E4477E1F",
-location:"113,372",
-text:"Toasts",
-typeid:15,
-uuid:"AC32BD3B-8B2C-432E-94C5-884D2C8ABD0D"
-},
-{
 containsFormID:"8B6B1163-3918-40B0-80C3-8AE363DF4086",
 location:"38,123",
 text:"Radio",
