@@ -1,0 +1,23 @@
+encapsulation:60,
+extendsID:"07898FB7-9FFB-458D-9DCC-EF2E4E6F2458",
+items:[
+{
+anchors:6,
+location:"2,177",
+size:"317,20",
+typeid:4,
+uuid:"2336FFBE-4EC0-4214-96BB-B8FCE6E55330"
+},
+{
+location:"34,28",
+size:"362,20",
+text:"Fourth tab page",
+transparent:true,
+typeid:7,
+uuid:"8C7E8B78-229B-45C1-87DD-514EE10ADF1F"
+}
+],
+name:"dummy4",
+showInMenu:true,
+typeid:3,
+uuid:"897DCFE1-B43F-452E-952C-5FD8AEE1BA67"
