@@ -1,0 +1,21 @@
+<md-radio-group layout-wrap 
+	class="amd-radio"
+	ng-model="model.dataProviderID" 
+	ng-change="onChange()"
+ 	sablo-tabseq-config="{container: true, reservedGap: 500}"
+	id="{{::model.svyMarkupId}}"
+	ng-if="model.visible">
+
+	<md-radio-button ng-repeat="item in model.valuelistID | filter:notNullOrEmpty('realValue')" 
+					 value="{{item.realValue}}" 
+				     ng-class="model.styleClass"
+				     class="amd-radio-item"
+					 ng-disabled="!model.enabled || model.readOnly"
+					 sablo-tabseq='model.tabSeq'
+	 				 svy-rightclick="handlers.onRightClickMethodID($event)" 
+				     svy-focusgained="handlers.onFocusGainedMethodID($event)"
+					 svy-focuslost="handlers.onFocusLostMethodID($event)"
+					 svy-click="selectItem($event, item.realValue)">
+		{{item.displayValue}}
+	</md-radio-button>
+</md-radio-group>

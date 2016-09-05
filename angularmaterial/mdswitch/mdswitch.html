@@ -1,0 +1,18 @@
+<md-switch 
+	ng-model="$parent.selection"
+	ng-change = "changeSelection()"
+	ng-true-value = "1"
+	ng-false-value = "0"
+	ng-disabled="!model.enabled || model.readOnly" 
+	class="amd-switch"
+	ng-class="model.styleClass" 
+	svy-tabseq='model.tabSeq'
+	svy-tooltip='model.toolTipText'
+	svy-click="handlers.onActionMethodID($event)" 
+ 	svy-rightclick='handlers.onRightClickMethodID($event)'
+	svy-focusgained='handlers.onFocusGainedMethodID($event)'
+	svy-focuslost='handlers.onFocusLostMethodID($event)'
+	id="{{::model.svyMarkupId}}" 
+	ng-if="model.visible">
+ 	   	<div ng-bind-html="model.label" class="md-label"></div>
+ </md-switch>
