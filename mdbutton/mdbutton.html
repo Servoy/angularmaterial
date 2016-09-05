@@ -2,7 +2,6 @@
 	class="amd-button"
 	ng-disabled="!model.enabled" 
 	ng-class='model.styleClass'
-	md-theme={{model.theme}}
 	aria-label="label-{{::model.svyMarkupId}}"
 	sablo-tabseq='model.tabSeq'
 	svy-tooltip='model.toolTipText'
@@ -13,6 +12,6 @@
 	ng-if="model.visible">
 
 	<md-icon ng-if='model.iconName && model.iconHorizontalAlignment == 2' ng-bind="model.iconName"></md-icon>
-   	<span ng-bind-html='(model.dataprovider == null || model.dataprovider.url ? model.text : model.dataprovider )' />
+   	<span ng-bind-html='(model.dataProviderID == null || model.dataProviderID.url ? model.text : model.dataProviderID )' />
 	<md-icon ng-if='model.iconName && model.iconHorizontalAlignment == 4' ng-bind="model.iconName"></md-icon>
 </md-button>

@@ -1,3 +1,6 @@
+.amd-radio-item:focus {
+    outline: none;
+}
 
 .amd-radio-item > .md-label {
 }

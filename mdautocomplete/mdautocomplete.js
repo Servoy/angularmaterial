@@ -1,4 +1,5 @@
-angular.module('angularmaterialMdautocomplete', ['servoy', 'ngMaterial']).directive('angularmaterialMdautocomplete', ['$timeout', '$q', '$utils', '$parse', function($timeout, $q, $utils, $parse) {
+angular.module('angularmaterialMdautocomplete', ['servoy', 'ngMaterial', 'amdUtils']).
+directive('angularmaterialMdautocomplete', ['$amdUtils','$timeout', '$q', '$utils', '$parse', '$compile', function($amdUtils, $timeout, $q, $utils, $parse, $compile) {
 		return {
 			restrict: 'E',
 			scope: {
@@ -9,7 +10,8 @@ angular.module('angularmaterialMdautocomplete', ['servoy', 'ngMaterial']).direct
 			},
 			controller: function($scope, $element, $attrs) { },
 			link: function($scope, $element, $attrs) {
-
+				// TODO to be fixed
+				
 				$scope.searchText = null;
 				$scope.simulateQuery = false;
 				$scope.isDisabled = false;
@@ -20,22 +22,24 @@ angular.module('angularmaterialMdautocomplete', ['servoy', 'ngMaterial']).direct
 				$scope.searchTextChange = searchTextChange;
 
 				$scope.dpChanged = false;
-
-				// use timeout to attach onFocusLost/focusGained event to input field in autocomplete
-				$timeout(function() {
-						var input = $element.find('input')
-						if (!input) {
-							console.log("warning: can't find input field in md-autocomplete");
-							return;
-						}
-
-						if ($scope.handlers.onFocusGainedMethodID) {
-							attachEventHandler(input, $scope, $scope.handlers.onFocusGainedMethodID, 'focus');
-						}
-						if ($scope.handlers.onFocusLostMethodID) {
-							attachEventHandler(input, $scope, $scope.handlers.onFocusLostMethodID, 'blur');
-						}
-					});
+				
+				function initInput() {
+					var input = $element.find('input')
+					if (!input || ! input.length) {
+						console.log("warning: can't find input field in md-autocomplete");
+						console.log($element[0])
+						return;
+					}
+					
+					// add tabSequence
+					$amdUtils.addTabSeq(input, $scope, $scope.modelTabSeq);
+					
+					// $amdUtils.attachOnEnter(input, $scope, $scope.handlers.onActionMethodID);
+					$amdUtils.attachOnFocusGained(input, $scope, $scope.handlers.onFocusGainedMethodID);
+					$amdUtils.attachOnFocusLost(input, $scope, $scope.handlers.onFocusLostMethodID);
+				}
+				
+				$timeout(initInput);
 
 				/**
 				 * Search for items... use $timeout to simulate
@@ -148,20 +152,13 @@ angular.module('angularmaterialMdautocomplete', ['servoy', 'ngMaterial']).direct
 						}
 					});
 				
-				
-				// attach handler to element. Source code from $utils.attachEventHandlers
-				function attachEventHandler (element,scope,fn,domEvent) {
-					element.on(domEvent, function(event) {
-							
-							function executeHandler(){
-								fn(event);
-							};
-							// always use timeout or evalAsync because this event could be triggered by a angular call (requestFocus) thats already in a digest cycle.
-							scope.$evalAsync(executeHandler);
-							return true;
-					}); 
-				}
+				$scope.$watch('model.visible', function(newVal, oldVal) {
 
+					if (newVal && newVal != oldVal) {
+						$timeout(initInput());
+						return;
+					}
+				});
 			},
 			templateUrl: 'angularmaterial/mdautocomplete/mdautocomplete.html'
 		};

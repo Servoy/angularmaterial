@@ -1,3 +1,7 @@
+.amd-autocomplete:focus {
+    outline: none;
+}
+
 md-autocomplete.amd-autocomplete {
 	min-width: 0px;
 }

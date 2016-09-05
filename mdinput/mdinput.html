@@ -9,7 +9,7 @@
 
   <label ng-bind-html="model.label"></label>
 
-  <input type="text" ng-model="model.dataProviderID" 
+  <input type="{{::model.inputType}}" ng-model="model.dataProviderID" 
 		sablo-tabseq='model.tabSeq'
 		svy-focusgained='handlers.onFocusGainedMethodID($event)'
 	   	svy-focuslost='handlers.onFocusLostMethodID($event)'

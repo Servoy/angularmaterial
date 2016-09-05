@@ -20,7 +20,7 @@
 		"iconHorizontalAlignment": {"type" :"int", "tags": { "scope" :"design" }, "values" :[{"LEFT":2},{"RIGHT":4}],"default" : 2},
 		"text": { "type": "tagstring", "tags": { "scope": "design"}},
 
-		"dataprovider": "dataprovider",
+		"dataProviderID": "dataprovider",
 		"styleClass": { "type": "styleclass", "tags": { "scope": "design"}, "default": "md-raised",
 			"values": [
 				"md-primary",

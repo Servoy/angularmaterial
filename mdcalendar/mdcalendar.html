@@ -1,0 +1,11 @@
+<md-datepicker ng-model="model.dataProviderID"
+	ng-disabled="model.readOnly == true || !model.enabled" 
+	md-placeholder="{{model.label}}"
+	class = "amd-datepicker"
+	ng-class="model.styleClass" 
+	svy-tooltip="model.toolTipText"
+	svy-rightclick='handlers.onRightClickMethodID($event)'
+	id="{{::model.svyMarkupId}}"
+	ng-if="model.visible"
+	ng-init="initInput()">
+</md-datepicker>
