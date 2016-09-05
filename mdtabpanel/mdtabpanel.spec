@@ -12,9 +12,9 @@
 	{
         "styleClass" 	: {"type":"styleclass", "tags": { "scope" :"design" },
 							"values": ["md-primary","md-warn","md-raised","md-fab","md-accent","md-hue-1","md-hue-2","md-hue-3"]}, 
-        "tabIndex" 		: {"type":"int", "pushToServer": "allow", "default":1}, 
+        "tabIndex" 		: {"type":"int", "pushToServer": "shallow", "tags": { "scope" :"runtime" },"default": 1},
         "tabSeq" 		: {"type" :"tabseq", "tags": { "scope" :"design" }}, 
-        "tabs" 			: {"type":"tab[]", "default" : [], "pushToServer": "deep", "droppable": true}, 
+        "tabs" 			: {"type":"tab[]", "pushToServer": "shallow", "droppable": true}, 
         
         "readOnly" 		: { "type": "protected", "tags" : { "scope" :"runtime" }, "blockingOn": true, "for": ["onChangeMethodID","onTabChangeMethodID"], "default":false },
         "enabled" 		: { "type": "enabled", "blockingOn": false, "default": true, "for": ["onChangeMethodID","onTabChangeMethodID"] }, 
@@ -27,10 +27,8 @@
 	{
         "onTabChange" 	: {
 		        "parameters" : [
-						            { "name" : "previousIndex", "type" : "Number" },
-						            { "name" : "event", "type" : "JSEvent" },
-						            { "name" : "newIndex", "type" : "Number" },
-						            { "name" : "newTabItem", "type" : "object" }
+						            { "name" : "previousIndex", "type" : "int" },
+						            { "name" : "event", "type" : "JSEvent" }
 						        ]
 		  }
 	},
@@ -165,7 +163,7 @@
 	  		"containedForm": "form",
 	  		"text": "tagstring",
 	  		"relationName": "relation",
-	  		"active": {"type" : "boolean", "tags":{"scope": "private"}, "default": false},
+	  		"active": {"type" : "boolean", "tags":{"scope": "private"}},
 	  		"disabled": {"type" : "boolean", "default": false}
 	  	}
 	}
