@@ -1,0 +1,6 @@
+addEmptyValue:1,
+customValues:"True|true\r\
+False|false",
+name:"booleanValues",
+typeid:34,
+uuid:"C4E7D909-E12B-4EA5-AE18-C68DB030CA2D"

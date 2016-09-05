@@ -1,0 +1,8 @@
+addEmptyValue:1,
+customValues:"One|1\r\
+Two|2\r\
+Three|3\r\
+",
+name:"numbers",
+typeid:34,
+uuid:"3B175321-805C-4F41-B355-763A65182DC7"

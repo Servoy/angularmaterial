@@ -1,0 +1,7 @@
+addEmptyValue:1,
+customValues:"<i>Hello<\/i>Left is a really long value which takes a lot fo space|-1\r\
+Middle|0\r\
+Right|1",
+name:"wideList",
+typeid:34,
+uuid:"9E361376-AD26-48CA-8633-F983C7DC70C6"
