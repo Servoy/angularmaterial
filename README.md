@@ -15,6 +15,8 @@ To add the Angular Material Components in your solution open the Servoy Develope
 
 To use the latest source code clone the git repository and checkout the develop branch. Install the [egit](http://www.eclipse.org/egit/download/) plugin for Eclipse to clone the repository and import the projects into the workspace.
 
+Is suggested to use the Angular Material Components within responsive type of Servoy Form; usage of Material Components in classic anchored type of Servoy Form is allowed but the dimensions (height and width) of the component is not stricly bounded to the design time dimension and may overflow the given size dimensions. 
+
 
 Documentation
 -------------
