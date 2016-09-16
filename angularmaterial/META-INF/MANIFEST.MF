@@ -3,8 +3,8 @@ Bundle-SymbolicName: angularmaterial
 Bundle-Name: Angular Material
 Bundle-Version: 1.1.0
 Package-Type: Web-Component
-CSS-ClientLibs: angularmaterial/lib/material/angular-material.css;name=angular-material.css;version=v1.0.0-rc5-master, angularmaterial/lib/material/angular-material.layouts.css;name=angular-material-layouts-css;version=v1.0.0-rc5-master, angularmaterial/lib/material/fonts/MaterialIcons-Regular/MaterialIcons-Regular.css;name=material-icons-regular.css;version=v1.0.0-rc5-master
-JS-ClientLibs: angularmaterial/lib/material/angular-material.js;name=angular-material.js;version=v1.0.0-rc5-master, angularmaterial/lib/material/angular-animate.js;name=angular-animate.js;version=1.4.3, angularmaterial/lib/material/angular-aria.js;name=angular-aria.js;version=v1.5.0, angularmaterial/lib/hammer/hammer.min.js;name=hammer.js;version=v2.0.4, angularmaterial/lib/material/angularmaterial-app.js;name=angularmaterial-app.js;version=v1.0.0
+CSS-ClientLibs: angularmaterial/lib/material/angular-material.css;name=angular-material.css;version=v1.0.0-rc5-master,angularmaterial/lib/material/angular-material.layouts.css;name=angular-material-layouts-css;version=v1.0.0-rc5-master,angularmaterial/lib/material/fonts/MaterialIcons-Regular/MaterialIcons-Regular.css;name=material-icons-regular.css;version=v1.0.0-rc5-master
+JS-ClientLibs: angularmaterial/lib/material/angular-material.js;name=angular-material.js;version=v1.0.0-rc5-master,angularmaterial/lib/material/angular-animate.js;name=angular-animate.js;version=1.4.3,angularmaterial/lib/material/angular-aria.js;name=angular-aria.js;version=v1.5.0,angularmaterial/lib/hammer/hammer.min.js;name=hammer.js;version=v2.0.4,angularmaterial/lib/material/angularmaterial-app.js;name=angularmaterial-app.js;version=v1.0.0
 
 Name: mdcalendar/mdcalendar.spec
 Web-Component: True
