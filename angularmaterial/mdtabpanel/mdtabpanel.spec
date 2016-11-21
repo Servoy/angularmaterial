@@ -6,7 +6,7 @@
 	"serverscript": "angularmaterial/mdtabpanel/mdtabpanel_server.js",
 	
 	"libraries": [
-			{"name":"mdcheck_custom.css", "version":"1.0.0", "url":"angularmaterial/mdtabpanel/mdtabpanel.css", "mimetype":"text/css"}
+			{"name":"mdtabpanel.css", "version":"1.0.0", "url":"angularmaterial/mdtabpanel/mdtabpanel.css", "mimetype":"text/css"}
 	],
 	"model":
 	{

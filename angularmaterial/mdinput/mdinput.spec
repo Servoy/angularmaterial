@@ -5,12 +5,7 @@
 	"definition": "angularmaterial/mdinput/mdinput.js",
 	"icon": "angularmaterial/mdinput/text.png",
 	
-	"libraries": [{
-		"name" : "mdinput.css",
-		"url" : "angularmaterial/mdinput/mdinput.css",
-		"version" : "1.0.0",
-		"mimetype": "text/css"
-	}],
+	"libraries": [{"name":"mdinput.css", "url":"angularmaterial/mdinput/mdinput.css", "version":"1.0.0", "mimetype":"text/css"}],
 	"model":
 	{
 		"styleClass"	: {"type":"styleclass", "tags": { "scope" :"design" },

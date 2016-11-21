@@ -76,6 +76,7 @@ uuid:"B96B92DA-589D-41BE-BDFF-9AF3EA8494C9"
 }
 ],
 name:"testBaseContainer",
+navigatorID:"-1",
 showInMenu:true,
 styleClass:"frm-container",
 typeid:3,

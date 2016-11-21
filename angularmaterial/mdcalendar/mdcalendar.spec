@@ -5,7 +5,7 @@
 	"definition": "angularmaterial/mdcalendar/mdcalendar.js",
 	
 	"libraries": [{
-		"name" : "mdinput.css",
+		"name" : "mdcalendar.css",
 		"url" : "angularmaterial/mdcalendar/mdcalendar.css",
 		"version" : "1.0.0",
 		"mimetype": "text/css"
