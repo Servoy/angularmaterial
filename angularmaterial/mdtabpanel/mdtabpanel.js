@@ -11,6 +11,7 @@ angular.module('angularmaterialMdtabpanel', ['servoy', 'ngMaterial']).directive(
 				
 				var persistTabs = true;		// flag used to persist tabs
 				var sessionIndex;			// the index of the restored session
+				var isContainerResponsive = !$element.parent().hasClass('svy-wrapper');
 				
 				/** @deprecated  */
 				$scope.mdSelectTab = function(index, t) {
@@ -60,7 +61,7 @@ angular.module('angularmaterialMdtabpanel', ['servoy', 'ngMaterial']).directive(
 				// Get form container style
 				$scope.getContainerStyle = function(tab) {
 					var style = {};
-					if (tab.height) {
+					if (isContainerResponsive && tab.height) {
 						style.height = tab.height + "px";
 					}
 					return style;
@@ -367,7 +368,7 @@ angular.module('angularmaterialMdtabpanel', ['servoy', 'ngMaterial']).directive(
 					}
 					return index;
 				}
-
+				
 			},
 			link: function($scope, $element, $attrs, $window) {
 
