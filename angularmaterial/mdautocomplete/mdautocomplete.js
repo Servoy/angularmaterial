@@ -1,5 +1,4 @@
-angular.module('angularmaterialMdautocomplete', ['servoy', 'ngMaterial', 'amdUtils']).
-directive('angularmaterialMdautocomplete', ['$amdUtils','$timeout', '$q', '$utils', '$parse', '$compile', function($amdUtils, $timeout, $q, $utils, $parse, $compile) {
+angular.module('angularmaterialMdautocomplete', ['servoy', 'ngMaterial', 'amdUtils']).directive('angularmaterialMdautocomplete', ['$amdUtils', '$timeout', '$q', '$utils', '$parse', '$compile', function($amdUtils, $timeout, $q, $utils, $parse, $compile) {
 		return {
 			restrict: 'E',
 			scope: {
@@ -11,34 +10,34 @@ directive('angularmaterialMdautocomplete', ['$amdUtils','$timeout', '$q', '$util
 			controller: function($scope, $element, $attrs) { },
 			link: function($scope, $element, $attrs) {
 				// TODO to be fixed
-				
+
 				$scope.searchText = null;
 				$scope.simulateQuery = false;
 				$scope.isDisabled = false;
 				$scope.items = [];
 				$scope.querySearch = querySearch;
-				$scope.selectedItem = getDisplayValue($scope.model.dataProviderID);		// fix for editable grid
+				$scope.selectedItem = getDisplayValue($scope.model.dataProviderID); // fix for editable grid
 				$scope.selectedItemChange = selectedItemChange;
 				$scope.searchTextChange = searchTextChange;
 
 				$scope.dpChanged = false;
-				
+
 				function initInput() {
 					var input = $element.find('input')
-					if (!input || ! input.length) {
+					if (!input || !input.length) {
 						console.log("warning: can't find input field in md-autocomplete");
 						console.log($element[0])
 						return;
 					}
-					
+
 					// add tabSequence
 					$amdUtils.addTabSeq(input, $scope, $scope.modelTabSeq);
-					
+
 					// $amdUtils.attachOnEnter(input, $scope, $scope.handlers.onActionMethodID);
 					$amdUtils.attachOnFocusGained(input, $scope, $scope.handlers.onFocusGainedMethodID);
 					$amdUtils.attachOnFocusLost(input, $scope, $scope.handlers.onFocusLostMethodID);
 				}
-				
+
 				$timeout(initInput);
 
 				/**
@@ -46,10 +45,10 @@ directive('angularmaterialMdautocomplete', ['$amdUtils','$timeout', '$q', '$util
 				 * remote dataservice call.
 				 */
 				function querySearch(query) {
-					if ($scope.dpChanged) {
-						$scope.dpChanged = false;
-						return;
-					}
+//					if ($scope.dpChanged) {
+//						$scope.dpChanged = false;
+//						return [];
+//					}
 
 					// valuelistID has values
 					if ($scope.model.valuelistID && $scope.model.valuelistID.length) {
@@ -63,8 +62,9 @@ directive('angularmaterialMdautocomplete', ['$amdUtils','$timeout', '$q', '$util
 						}
 
 						// search for results
-						var results = (query != null && query != '') ? items.filter(createFilterFor(query)) : items;
-
+						var results = items ? ((query != null && query != '') ? items.filter(createFilterFor(query)) : items) : [];
+						
+						console.log(results)
 						// TODO deferred
 						var deferred;
 						if ($scope.simulateQuery) {
@@ -136,11 +136,11 @@ directive('angularmaterialMdautocomplete', ['$amdUtils','$timeout', '$q', '$util
 				$scope.$watch('model.dataProviderID', function(newVal, oldVal) {
 
 						if (newVal == oldVal) {
-//							if ($scope.model.dataProviderID == null || $scope.model.dataProviderID == '') {
-//								$scope.searchText = '';
-//							} else {
-//								$scope.searchText = getDisplayValue($scope.model.dataProviderID);
-//							}
+							//							if ($scope.model.dataProviderID == null || $scope.model.dataProviderID == '') {
+							//								$scope.searchText = '';
+							//							} else {
+							//								$scope.searchText = getDisplayValue($scope.model.dataProviderID);
+							//							}
 							return;
 						}
 
@@ -151,14 +151,14 @@ directive('angularmaterialMdautocomplete', ['$amdUtils','$timeout', '$q', '$util
 							$scope.searchText = getDisplayValue($scope.model.dataProviderID);
 						}
 					});
-				
+
 				$scope.$watch('model.visible', function(newVal, oldVal) {
 
-					if (newVal && newVal != oldVal) {
-						$timeout(initInput());
-						return;
-					}
-				});
+						if (newVal && newVal != oldVal) {
+							$timeout(initInput());
+							return;
+						}
+					});
 			},
 			templateUrl: 'angularmaterial/mdautocomplete/mdautocomplete.html'
 		};
