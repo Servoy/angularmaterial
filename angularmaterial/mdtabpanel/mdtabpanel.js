@@ -58,8 +58,13 @@ angular.module('angularmaterialMdtabpanel', ['servoy', 'ngMaterial']).directive(
 				//				}
 
 				// Get form container style
-				$scope.getContainerStyle = function() {
-					return { top: $element.find(".nav-tabs").height() + "px" };
+				$scope.getContainerStyle = function(tab) {
+					var style = {};
+					if (tab.height) {
+						style.height = tab.height + "px";
+					}
+					return style;
+//					return { top: $element.find(".nav-tabs").height() + "px" };
 					//			return {minHeight:($scope.model.size.height - 40)+"px",
 					//					height: "100%",
 					//					position:"relative",

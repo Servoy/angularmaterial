@@ -8,12 +8,21 @@
 }
 
 .amd-tabpanel {
-	/*height: 100%;*/
 }
 
-.svy-titleheader > div > *> .amd-tabpanel,
-.svy-header > div > *> .amd-tabpanel,
-.svy-body > div > *> .amd-tabpanel,
-.svy-footer > div > *> .amd-tabpanel {
+.svy-wrapper > * > .amd-tabpanel {
 	height: 100%;
+}
+
+.svy-wrapper > * > .amd-tabpanel:not(.md-no-tab-content):not(.md-dynamic-height) {
+	min-height: 0;
+}
+
+.svy-layoutcontainer > * > .amd-tabpanel > md-tabs-content-wrapper {
+	position: relative;
+    top: 0;
+}
+
+.svy-layoutcontainer > * > .amd-tabpanel > md-tabs-content-wrapper > md-tab-content {
+	position: relative;
 }

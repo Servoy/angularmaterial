@@ -159,12 +159,13 @@
 	"types":
 	{
 		"tab": {
-	  		"name": "string",
+	  		"name"    : "string",
 	  		"containedForm": "form",
-	  		"text": "tagstring",
+	  		"text"    : "tagstring",
 	  		"relationName": "relation",
-	  		"active": {"type" : "boolean", "tags":{"scope": "private"}},
-	  		"disabled": {"type" : "boolean", "default": false}
+	  		"active"  : {"type" : "boolean", "tags":{"scope": "private"}},
+	  		"disabled": {"type" : "boolean", "default": false},
+	  		"height"  : {"type":"int"}
 	  	}
 	}
 }

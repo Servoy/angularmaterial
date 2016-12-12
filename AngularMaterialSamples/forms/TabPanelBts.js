@@ -9,7 +9,7 @@ function onLoad(event) {
 	_super.onLoad(event)
 	
 	elements.mdtabpanel_test.tabs = [{
-		containedForm : "dummy1Bts",
+		containedForm : "ButtonBts",
 		text: "First Form"
 	}, { 
 		containedForm : "dummy2Bts",
@@ -17,12 +17,14 @@ function onLoad(event) {
 		disabled: true
 	},{ 
 		containedForm : "dummy5Bts",
-		text: "Fifth form"
+		text: "Fifth form",
+		height: 300
 	}]
 	
 	elements.mdtabpanel_readonly.tabs = [{
 		containedForm : "dummy3Bts",
-		text: "Third Form"
+		text: "Third Form",
+		height : 300
 	}, { 
 		containedForm : "dummy4Bts",
 		text: "Fourth form (Disabled)",

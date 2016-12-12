@@ -1,4 +1,5 @@
-<md-tabs 	md-selected="$parent.selectedIndex" 
+<md-tabs 	
+			md-selected="$parent.selectedIndex" 
 			ng-if="!waitForSessionRestore"
 			id="{{::model.svyMarkupId}}"
 			class="amd-tabpanel" 
@@ -9,8 +10,7 @@
 
     <md-tab ng-repeat="tab in model.tabs"
 			md-active="$index == model.tabIndex-1"
-			ng-disabled="tab.disabled || !model.enabled || model.readOnly"
-			class="mdtabpanel-fullheight">
+			ng-disabled="tab.disabled || !model.enabled || model.readOnly">
 
 		<md-tab-label><div ng-bind-html="tab.text"/></md-tab-label>
 
@@ -21,7 +21,7 @@
 						ng-include="getActiveTabUrl(tab)" 
 						sablo-tabseq='1' 
 						sablo-tabseq-config="{container: true}" 
-						<!--ng-style='getContainerStyle()'--> />
+						ng-style='getContainerStyle(tab)' />
         </md-tab-body>
 
     </md-tab>
