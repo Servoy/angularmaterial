@@ -8,6 +8,7 @@ Warning
 The performance of Angular Material library and furthermore of the Angular Material Web Components are not optimal on Windows based browsers (IE, Edge). Is strongly reccomanded to use this set of components only if the browser systems your application should support does not include IE and/or Edge.
 Note that using Angular Material Components has perfomance impact also on the HTML5 Servoy Form Editor itself on Windows based systems.
 
+Also note that Material Components are better suited to be used in responsive forms. [Read here](https://github.com/Servoy/angularmaterial/wiki#material-components-and-form-designer).
 
 Getting started
 -------------
