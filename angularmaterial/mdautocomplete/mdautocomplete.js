@@ -64,7 +64,6 @@ angular.module('angularmaterialMdautocomplete', ['servoy', 'ngMaterial', 'amdUti
 						// search for results
 						var results = items ? ((query != null && query != '') ? items.filter(createFilterFor(query)) : items) : [];
 						
-						console.log(results)
 						// TODO deferred
 						var deferred;
 						if ($scope.simulateQuery) {
