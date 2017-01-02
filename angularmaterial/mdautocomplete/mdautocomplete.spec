@@ -19,7 +19,7 @@
 		
 		"tabSeq" 		: {"type" :"tabseq", "tags": { "scope" :"design" }}, 
         "toolTipText" 	: {"type" :"tagstring"}, 
-		"enabled"		: {"type":"protected", "default": true, "blockingOn": false, "for": ["dataProviderID","onActionMethodID","onDataChangeMethodID","onFocusGainedMethodID","onFocusLostMethodID","onRightClickMethodID"] },
+		"enabled"		: {"type":"enabled", "default": true, "blockingOn": false, "for": ["dataProviderID","onActionMethodID","onDataChangeMethodID","onFocusGainedMethodID","onFocusLostMethodID","onRightClickMethodID"] },
         "readOnly"		: {"type":"protected", "default": false, "tags" : { "scope" :"runtime" }, "blockingOn": true, "for": ["dataProviderID","onActionMethodID","onDataChangeMethodID","onFocusGainedMethodID","onFocusLostMethodID","onRightClickMethodID"] },
 
         "visible" 		: {"type":"visible", "default":true},

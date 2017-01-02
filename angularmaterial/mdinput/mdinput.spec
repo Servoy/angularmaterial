@@ -17,7 +17,7 @@
         "toolTipText" 	: {"type" : "tagstring"}, 
         "inputType" 	: {"type":"string" , "tags": { "scope" :"design" }, "default" : "text",  "values" :["text", "password"]},
 	    "readOnly" 		: {"type":"protected", "default": false, "blockingOn": true, "tags" : { "scope" :"runtime" }, "for": ["dataProviderID","onActionMethodID","onDataChangeMethodID","onFocusGainedMethodID","onFocusLostMethodID","onRightClickMethodID"] }, 
-	    "enabled"		: {"type":"protected", "default": true, "blockingOn": false, "for": ["dataProviderID","onActionMethodID","onDataChangeMethodID","onFocusGainedMethodID","onFocusLostMethodID","onRightClickMethodID"] },
+	    "enabled"		: {"type":"enabled", "default": true, "blockingOn": false, "for": ["dataProviderID","onActionMethodID","onDataChangeMethodID","onFocusGainedMethodID","onFocusLostMethodID","onRightClickMethodID"] },
         "visible" 		: {"type":"visible", "default":true},
         "location" 		: "point", 
 		"size"			: {"type": "dimension","default":{"width": 150,"height": 58}}

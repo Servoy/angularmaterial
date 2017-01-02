@@ -58,7 +58,7 @@
 		"tabSeq": { "type": "tabseq", "tags": { "scope": "design"}},
 
 		"toolTipText": "tagstring",
-		"enabled"		: {"type":"protected", "default": true, "blockingOn": false, "for": ["dataprovider","onActionMethodID","onDoubleClickMethodID","onFocusGainedMethodID","onFocusLostMethodID","onRightClickMethodID"] },
+		"enabled"		: {"type":"enabled", "default": true, "blockingOn": false, "for": ["dataprovider","onActionMethodID","onDoubleClickMethodID","onFocusGainedMethodID","onFocusLostMethodID","onRightClickMethodID"] },
 
 		"visible": { "type": "visible", "default": true },
 

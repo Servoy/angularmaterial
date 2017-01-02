@@ -16,7 +16,7 @@
         "valuelistID" 	: { "type": "valuelist", "tags": { "scope" :"design" } },
         "tabSeq" 		: {"type" :"tabseq", "tags": { "scope" :"design" }}, 
         
-		"enabled"		: {"type":"protected", "default": true, "blockingOn": false, "for": ["dataProviderID","onActionMethodID","onDataChangeMethodID","onFocusGainedMethodID","onFocusLostMethodID","onRightClickMethodID"] },
+		"enabled"		: {"type":"enabled", "default": true, "blockingOn": false, "for": ["dataProviderID","onActionMethodID","onDataChangeMethodID","onFocusGainedMethodID","onFocusLostMethodID","onRightClickMethodID"] },
         "readOnly"		: {"type":"protected", "default": false, "blockingOn": true, "tags" : { "scope" :"runtime" }, "for": ["dataProviderID","onActionMethodID","onDataChangeMethodID","onFocusGainedMethodID","onFocusLostMethodID","onRightClickMethodID"] },
 
         "visible" 		: {"type":"visible", "default":true},
