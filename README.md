@@ -12,7 +12,7 @@ Also note that Material Components are better suited to be used in responsive fo
 
 Getting started
 -------------
-To add the Angular Material Components in your solution open the Servoy Developer IDE and download the Angular Material package from the Web Package Manager (the Web Package Manager is accessible from the context menu of the Web Components node of your solution).
+To add the Angular Material Components in your solution download the angularmaterial.zip from the latest [release](https://github.com/Servoy/angularmaterial/releases) open the Servoy Developer IDE and import the .zip into your workspace; right click on the Web Packages node and import the zip web package.
 
 To use the latest source code clone the git repository and checkout the develop branch. Install the [egit](http://www.eclipse.org/egit/download/) plugin for Eclipse to clone the repository and import the projects into the workspace.
 
